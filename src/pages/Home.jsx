@@ -7,8 +7,37 @@ import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import BlogCard from "../components/Card";
+import Card from "../components/Card";
 
 const Home = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Konversi Suhu",
+      description: "Description for Project 1",
+      image: "https://picsum.photos/200",
+    },
+    {
+      id: 2,
+      title: "Konversi Suhu",
+      description: "Description for Project 1",
+      image: "https://picsum.photos/204",
+    },
+    {
+      id: 3,
+      title: "Konversi Suhu",
+      description: "Description for Project 1",
+      image: "https://picsum.photos/345",
+    },
+    {
+      id: 4,
+      title: "Konversi Suhu",
+      description: "Description for Project 4",
+      image: "https://picsum.photos/200",
+    },
+  ];
+
   const { ref: sectionRef, inView: sectionInView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -124,15 +153,13 @@ const Home = () => {
         </h2>
         <Slider {...settings} className="mb-4">
           {" "}
-          {/* Added w-full */}
-          {[1, 2, 3, 4].map((project) => (
-            <div key={project} className="px-2">
-              <div className="bg-white rounded shadow p-4 h-24 sm:h-32 md:h-48 flex items-center justify-center">
-                <h3 className="font-bold text-center text-sm sm:text-base md:text-lg">
-                  Project {project}
-                </h3>
-              </div>
-            </div>
+          {projects.map((project) => (
+            <Card
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              image={project.image}
+            />
           ))}
         </Slider>
       </div>
