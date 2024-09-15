@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add these imports to your main CSS file (e.g., App.css) */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+ 
+}
+
+
+.nav{
+  height: 60px;
+  width: 100%;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+}
+.nav-wrapper{
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
