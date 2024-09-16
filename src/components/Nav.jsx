@@ -7,11 +7,11 @@ function Nav() {
   const menuRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   const handleClickOutside = (event) => {
-    if (menuRef.current && !menuRef.current.contains(event.target)) {
+    if (menuRef.current && !menuRef.current.contains(event.target) && !event.target.closest('.menu-button')) {
       setIsOpen(false);
     }
   };
@@ -72,9 +72,9 @@ function Nav() {
       </motion.nav>
 
       {/* Hamburger Menu for small screens */}
-      <div className="fixed left-0 md:hidden">
+      <div className="fixed top-0 right-0 md:hidden w-full">
         <button
-          className="text-blue-400 focus:outline-none p-3"
+          className="text-blue-400 focus:outline-none p-3 menu-button"
           onClick={toggleMenu}
         >
           <svg
@@ -95,7 +95,7 @@ function Nav() {
 
         <div
           ref={menuRef}
-          className={`fixed top-12 right-0 mt-16 w-48 bg-nav p-6 transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
+          className={`fixed top-0 right-0 mt-16 w-48 bg-nav p-6 transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"}`}
         >
           <ul className="space-y-4">
             <li>
