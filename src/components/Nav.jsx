@@ -7,7 +7,7 @@ function Nav() {
     <>
       {/* Navbar */}
       <motion.nav
-        className="w-screen z-10 "
+        className="w-screen z-10"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
@@ -22,7 +22,7 @@ function Nav() {
           </div>
 
           {/* Menu */}
-          <ul className="flex space-x-6 mr-2 md:mr-8 font-medium">
+          <ul className="flex space-x-6 mr-2 md:mr-8 font-medium ">
             <li>
               <a
                 href="#home"

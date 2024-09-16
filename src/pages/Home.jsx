@@ -1,13 +1,10 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import BlogCard from "../components/Card";
 import Card from "../components/Card";
 
 const Home = () => {
@@ -38,10 +35,6 @@ const Home = () => {
     },
   ];
 
-  const { ref: sectionRef, inView: sectionInView } = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-  });
 
   const settings = {
     dots: false,
@@ -95,7 +88,6 @@ const Home = () => {
           </div>
           <div className="mt-4 sm:mt-6">
             <ul className="flex gap-4">
-              <a href="#additional-section">P</a>
               {[
                 {
                   icon: faInstagram,
@@ -143,15 +135,13 @@ const Home = () => {
       >
         {/* Removed container class */}
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
-          Additional Section
+          Latest Projects 
         </h2>
         <p className="text-xs sm:text-sm md:text-base mb-4">
-          This is an additional section that appears below the main content.
+          Berikut adalah beberapa proyek yang pernah saya kerjakan:
         </p>
-        <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-4">
-          Latest Projects Overview
-        </h2>
-        <Slider {...settings} className="mb-4">
+
+        <Slider {...settings} className="">
           {" "}
           {projects.map((project) => (
             <Card
