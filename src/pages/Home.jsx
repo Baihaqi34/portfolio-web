@@ -18,7 +18,7 @@ const Home = () => {
     {
       id: 1,
       title: "Konversi Suhu",
-      description: "ini adalah project pertama yang saya buat xixixix hehe haha hhihdia hadah",
+      description: "My first project",
       image: "https://picsum.photos/200",
       link: "https://baihaqi34.github.io/",
       tech: ["html5", "css3", "js"],

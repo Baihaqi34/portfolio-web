@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
 function Nav() {
@@ -40,7 +39,9 @@ function Nav() {
         <div className="text-blue-400 text-2xl font-bold">
           <a href="#home" className="flex items-center">
             <img src="/" alt="" className="h-8 mr-2" />
-            <span>B</span>
+          <span className="-rotate-45">B</span>
+
+
           </a>
         </div>
         <ul className="flex space-x-6 mr-2 font-medium">
@@ -61,12 +62,12 @@ function Nav() {
             </a>
           </li>
           <li>
-            <Link
-              to="#additional-section"
+            <a
+              href="#tech"
               className="text-blue-400 hover:text-gray-400 transition-colors duration-300"
             >
-              Contact
-            </Link>
+              Tech
+            </a>
           </li>
         </ul>
       </motion.nav>
