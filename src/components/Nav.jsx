@@ -117,13 +117,13 @@ function Nav() {
               </a>
             </li>
             <li>
-              <Link
-                to="#additional-section"
+              <a
+                href="#tech"
                 className="text-blue-400 hover:text-gray-400 transition-colors duration-300"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
-              </Link>
+                Tech
+              </a>
             </li>
           </ul>
         </div>

@@ -170,7 +170,7 @@ const Home = () => {
       </div>
       <div
         className="bg-gray-100 p-4 sm:p-8 md:p-16 h-screen min-w-full flex flex-col justify-center"
-        id="third-section"
+        id="tech"
       >
         {/* Removed container class */}
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
